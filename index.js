@@ -6,7 +6,14 @@ const connection = require("./database/db.js");
 const product_list = require("./product_list.js");
 const PORT = process.env.PORT || 3001;
 
-app.use(cors());
+const corsOptions = {
+    origin: 'https://laundry-frontend-1bzk.onrender.com',
+    credentials: true,            //access-control-allow-credentials:true
+    optionSuccessStatus: 200
+}
+app.use(cors(corsOptions));
+
+// app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
