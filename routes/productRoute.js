@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const cors = require("cors");
-router.use(cors(corsOptions));
+// router.use(cors(corsOptions));
 const Product = require("../models/product.js");
 
 router.get("/", async (req, res) => {
